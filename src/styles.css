@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f6f8;
+  color: #20242a;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 48px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0 0 4px;
+}
+
+.header p,
+.muted {
+  color: #68707c;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #c8cdd3;
+  border-radius: 6px;
+  background: white;
+}
+
+input:disabled {
+  background: #f0f1f3;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  padding: 11px 16px;
+  cursor: pointer;
+  background: #24292f;
+  color: white;
+  font-weight: 600;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #e9ecef;
+  color: #20242a;
+}
+
+.success {
+  color: #137333;
+  margin-bottom: 0;
+}
+
+.error {
+  color: #b42318;
+  margin-bottom: 0;
+}
+
+.result-card {
+  margin-top: 20px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.result-item {
+  border: 1px solid #e3e6ea;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.result-item span {
+  display: block;
+  color: #68707c;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.section-title h2,
+.section-title p {
+  margin-top: 0;
+}
+
+.settlement-area {
+  border-top: 1px solid #e3e6ea;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.settlement-area p {
+  overflow-wrap: anywhere;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #e3e6ea;
+  text-align: left;
+}
+
+th {
+  background: #f7f8fa;
+}
+
+.key-cell {
+  max-width: 280px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .grid,
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
